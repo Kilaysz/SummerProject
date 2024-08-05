@@ -1,9 +1,0 @@
-{
-  "database": {
-    "rules": "database.rules.json"
-  },
-  "hosting": {
-    "site": "login-server-336ad-9d516",
-    "public": "public"
-  }
-}
