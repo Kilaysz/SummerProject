@@ -1,0 +1,18 @@
+{"intents":[
+    {"tag": "greetings",
+    "patterns": ["hello", "hi", "how are you?", "what's up?", "how is it going?"],
+    "responses": ["Hello!", "Hey, What can I do for you?"]},
+    {"tag": "goodbye",
+    "patterns": ["goodbye", "see you later", "bye", "see ya", "I am leaving", "cao"],
+    "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye"]},
+    {"tag": "Open-Time",
+    "patterns": ["When did you guys open?", "Open time", "what are your hours?", "The time by your shop opens"],
+    "responses": ["We are open 24/7", "We are always open for 24/7"]},
+    {"tag": "Item",
+    "patterns": ["What are your products", "Products", "what do you sell?", "Introduce the product please", "What do you recommend?"],
+    "responses": ["Our product is a series of python books. Seven-in-one python book series is a game-changer because it introduces many concepts about programming and coding in python."]},
+    {"tag": "name",
+    "patterns": ["What is your name", "What can I call you", "Who is this?", "Introduce yourself", "What do people call you"],
+    "responses": ["People call me Neural, a shopping assistant that can help you finding the best product"]}
+    
+]}

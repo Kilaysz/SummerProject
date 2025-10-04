@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/* NAVBAR */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height : var(--nav-height);
+  z-index: 1000;
+
+  background: var(--nav-bg);
+  color: var(--nav-contrast);
+  animation: fadeIn 2s ease forwards; /* 1s duration, smooth easing */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18)  ;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-90px); /* optional: slide down slightly */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.nav{
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position: relative; /* was fixed - keep header fixed instead */
+  height: var(--nav-height);
+  scroll-behavior: auto;
+}
+
+.nav__brand{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+.nav__logo{
+  color:var(--nav-contrast);
+  text-decoration:none;
+  font-weight:900;
+  font-size:1.5rem;
+  margin-left: 50px;
+  padding:0;
+  font-family : 'Space Grotesk', sans-serif;
+}
+
+.nav__logo:hover{
+  color: black;
+}
+
+.nav__list{
+  list-style: none;
+  margin: 3%;
+  padding:0;
+  display:flex;
+  gap :9%;
+  align-items:center;     /* use a valid value */  
+  justify-content: flex-end;
+}
+
+.nav__link{
+  color:var(--nav-contrast);
+  text-decoration:none;
+  padding:0.5rem 0.75rem;
+  border-radius:6px;
+  transition:background .15s, color .15s, transform .18s cubic-bezier(.2,.9,.3,1);
+  font-weight:600;
+  font-size: 1.5rem;
+  display:inline-block; /* allow transform without affecting layout */
+  transform-origin:center;
+  will-change:transform;
+  font-family : 'Space Grotesk', sans-serif;
+  font-size:  30 px ;
+  margin-right: 10px;
+}
+
+.nav__link:hover,
+.nav__link:focus-visible{
+  background:rgba(0, 0, 0, 0.158);
+  outline:none;
+  transform:scale(1.08); /* enlarge on hover/focus */
+}
+
+.nav__link:active{
+  transform:scale(0.98); /* subtle press feedback */
+}

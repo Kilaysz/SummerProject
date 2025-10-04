@@ -1,0 +1,135 @@
+#back_intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-image : url(../assets/5797321.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.IMG {
+   display: block;
+   margin: 0 0;   /* centers it horizontally if inside a parent with text-align: left */
+   width: 36%;
+   height: auto;     /* keeps aspect ratio */
+   animation: fadeIn_pic 2s ease-out;
+}
+
+
+.cursor {
+  display: inline-block;
+  margin-left: 4px;
+  width: 0.6ch;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  /* no animation here */
+}
+
+.cursor.blink {
+  animation: blink 1s steps(1, start) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.intro{
+    margin: 0;
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Align text to the left */
+    justify-content: space-between;
+    margin-left: 5%;
+    flex: 1;  /* take available space */
+
+    /* keep layout stable when the typing text changes */
+    width: 60%;           /* reserve a stable column for text */
+    min-width: 320px;     /* prevent collapsing on narrow viewports */
+}
+
+.LearnMore{
+     margin-top: 2%;
+    display: flex;
+    margin-left: 0; /* remove this so button stays aligned to wrapper */
+    width: auto;
+    animation: fadeIn_text 2s ease-out;
+    flex: 0 0 auto;  /* do not grow/shrink based on text */
+}
+
+.LearnMore a {
+    min-width: 140px;   
+    justify-content: center;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+@keyframes fadeIn_text {
+  from {
+    transform: translateX(-90px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+}
+.LearnMore a:hover {
+    background-color: #ff00a1;
+
+}
+
+.intro {
+    margin-right: 0%;
+    width: 100%;
+    font-size: 45px;
+    font-weight: 600;
+    color: rgb(255, 0, 238);
+    font-family : 'Space Grotesk', sans-serif;
+    justify-content: space-between; 
+    align-items: left;
+    padding: 0;
+    
+
+}
+
+.text { 
+    display: block;
+    margin:0;
+    margin-left: 0;
+    align-items: left;
+    flex: 0 0 auto;     /* don't stretch */
+    white-space: nowrap; /* keep it on one line while typing */
+    overflow: hidden;    /* hide overflow during typing */
+    min-width: 40ch;     /* reserve space for longest string (adjust as needed) */
+    max-width: 100%;
+    min-height: 10vh;
+}
+
+
+@keyframes fadeIn_pic {
+  from {
+    opacity: 0;
+    transform: translateX(90px); /* optional: slide down slightly */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

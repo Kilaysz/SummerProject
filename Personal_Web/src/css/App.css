@@ -1,0 +1,15 @@
+:root{
+  --bg:#00ffea;
+  --nav-bg:#72f00ae0;
+  --nav-contrast:#ffffff;
+  --accent:#ff00d4;
+  --nav-height: 10vh;
+}
+
+body{
+  padding:0;
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background:var(--bg);
+  scroll-behavior: smooth;
+}
